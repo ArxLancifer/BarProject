@@ -1,0 +1,160 @@
+/* Box Model Hack */
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+/* Clear fix hack */
+.clearfix:after {
+     content: ".";
+     display: block;
+     clear: both;
+     visibility: hidden;
+     line-height: 0;
+     height: 0;
+}
+
+.clear {
+	clear: both;
+}
+body{
+    background-color: rgb(77, 77, 77);
+    width: 100%;
+    height: 100%;
+}
+/******************************************
+/* BASE STYLES
+/*******************************************/
+/******************************************
+/* BASIC NAVBAR STYLING
+/*******************************************/
+.top-nav-bar {
+    display: flex;
+    justify-content: space-around;
+    background-color: black;
+    color: #fff;
+    padding: 1.2rem 0;
+    min-height: 60px;
+    
+}
+.top-nav-bar a {
+    color: #fff;
+    text-decoration: none;
+    
+}
+.top-nav-bar li{
+    list-style: none;
+}
+
+.top-nav-bar li a:hover {
+    transition: all 200ms linear;
+    font-size: 1.05rem;
+    color: rgb(124, 62, 12);
+}
+
+.top-nav-bar ul {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    flex-grow: 1; 
+}
+.top-nav-bar .nav-links {
+    width: 50%;
+}
+.top-nav-bar .nav-links  li:nth-child(-n+6){
+    text-align: center;
+    /* border: 2px solid; */
+    width: 15%;
+   
+}
+.burger-icon{
+    align-self: center;
+    width: 1%;
+    padding-left: 5%;
+}
+.picks-counter{
+    background-color: rgb(151, 151, 151);
+    width: 18px;
+    height: 18px;
+    text-align: center;
+    border-radius: 10px;
+}
+.cart{
+    padding: 0 10px;
+}
+/******************************************
+/* SIDEBAR SECTION STYLING
+/*******************************************/
+div.sidebar{
+    position: fixed;
+    z-index: 2;
+    width: 15%;
+    line-height: 2rem;
+    height: 100%;
+    background-color: rgb(34, 34, 34);
+    left:-20%;
+    transition: left 200ms ease-in;
+}
+.burger-icon:hover div.sidebar{
+    left: 0;
+}
+div.sidebar ul{
+    list-style: none;
+    
+}
+div.sidebar li a{
+    color: #fff;
+    text-decoration: none;  
+    
+}
+div.sidebar li{
+    margin: 5% 0;
+    padding: 2% 10%;
+    width: 0;
+    transition: width 300ms ease-out;
+}
+div.sidebar li:hover {
+    box-shadow: inset -3px -3px 2px rgb(44, 44, 44), inset 3px 3px 2px rgb(44, 44, 44);
+    width: 100%;
+}
+.sidebar-arrow{
+    font-size: 2rem;
+    font-weight: 900;
+    width: 5%;
+}
+ul> li.sidebar-arrow{
+    text-align: right;
+    color: #fff;
+    font-size: 2rem;
+    width: 100%;
+    cursor: pointer;
+}
+/* div.sidebar ul::before{
+    margin: 0 80%;
+    content: "\21E6";
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: 600;
+} */
+/******************************************
+/* HEADER SECTION STYLING
+/*******************************************/
+.top-section {
+    background: url('pattern.jpg');
+    clip-path: polygon(100% 0, 100% 60%, 50% 90%, 0 60%, 0 0, 0 0);
+    padding-bottom: 20%;
+    
+}
+.logo {
+    position: relative;
+    top:4rem;
+    margin: 0 auto;
+    width: 200px;  
+}
+.logo img{
+    
+    
+    display: block;
+}
+/* clip-path: polygon(100% 0, 100% 20%, 50% 36%, 0 20%, 0 0, 0 0); */
